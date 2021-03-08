@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll animation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="intro">
+        <p class="scrollText">Scroll Down</p>
+    </section>
+    <section class="anim">
+        <h1>Animation</h1>
+        <p class="desc lax lax_preset_fadeInOut:188.5:0">Scroll Animation using laxx.js</p>
+        <div class="box1 lax lax_preset_spin"  ></div>
+        <div class="box2 lax lax_preset_blurInOut:188.5:10 lax_preset_fadeInOut:188.5:0"></div>
+    </section>
+    <section>Scroll Up</section>
+
+
+
+    <script src="./node_modules/lax.js/lib/lax.min.js"></script>
+    <script>
+        window.onload = function () {
+            lax.init()
+
+            // Add a driver that we use to control our animations
+            lax.addDriver('scrollY', function () {
+            return window.scrollY
+            })
+
+        }
+    </script>
+
+
+</body>
+</html>
